@@ -1,0 +1,24 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '3,15,35 8-18 * * *'
+
+jobs:
+  autogreen:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+
+      - name: Auto green
+        run: |
+          git config --local user.email "3115014909@qq.com"
+          git config --local user.name "junbluedd"
+          git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git pull --rebase
+          git commit --allow-empty -m "每天给别人一绿"
+          git push
