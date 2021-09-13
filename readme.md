@@ -9,6 +9,6 @@
     
     git config --local user.name "junbluedd"  //这里配置你的github用户名
     
-   配置完成保存点击actions开启自动任务，点击star启动一次，每天自动启动。
+   配置完成保存点击actions开启自动任务，点击star触发启动一次，然后每天会自动启动。
    
 这是个绿油油的项目，点亮小绿框，从我做起
