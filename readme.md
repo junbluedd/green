@@ -1,6 +1,6 @@
 #github每天自动点亮小绿框
 
-修改/workflows/main.yml
+修改/workflows/main.yml       
     - cron: '3,17,35 8-18 * * *'  // 引号内修改每天刷绿的时间段和次数，默认是每天20次左右可以不用改
     
     git config --local user.email "3115014909@qq.com"  //这里配置你的github邮箱
