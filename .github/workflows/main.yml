@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '3,17,35 8-18 * * *'
+    - cron: '3,17,35,45,58 8-18 * * *'
 
 jobs:
   autogreen:
@@ -20,5 +20,5 @@ jobs:
           git config --local user.name "junbluedd"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
-          git commit --allow-empty -m "每天给别人一green"
+          git commit --allow-empty -m "每天一个green"
           git push
